@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="logo">
+            <img src="" class="log">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">FACEBOOK</a></li>
+                <li><a href="">GMAIL</a></li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="left">
+                <h1>My Music</h1>
+            </div>
+            <div class="right">
+                <p>Click Here To Music</p>
+                <img src="image/play (1).png" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="MySong">
+        <source src="music/Beggin_ - Maneskin.mp3" type="audio/mp3"> 
+    </audio>
+    <script>
+        let MySong = document.getElementById("MySong");
+        let icon = document.getElementById("icon")
+        icon.onclick = function() {
+            if(MySong.paused){
+
+                MySong.play();
+                icon.src ="image/pause-button.png";
+            }else{
+                MySong.pause();
+                icon.src ="image/play (1).png";
+            }
+        }
+    </script>
+</body>
+</html>
